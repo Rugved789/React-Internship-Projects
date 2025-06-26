@@ -11,7 +11,6 @@ const API_URL = "http://www.omdbapi.com/?apikey=e54ba0ce"
 function App() {
 
   const [movies, setMovies] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
 
 
   const searchMovie = async (title) => {
@@ -35,8 +34,6 @@ function App() {
       <div className="home">
         <Heading />
         <SearchBar
-          search_item={setSearchTerm}
-          item_for_search={searchTerm}
           search_movie={searchMovie} />
 
         {movies?.length > 0 ? (
